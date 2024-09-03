@@ -10,18 +10,18 @@ class RunnerTest(unittest.TestCase):
         self.assertEqual(runner.distance, 50)
 
     def test_run(self):
-        runner = Runner('James')
+        runner2 = Runner('James')
         for _ in range(10):
-            runner.run()
-        self.assertEqual(runner.distance, 100)
+            runner2.run()
+        self.assertEqual(runner2.distance, 100)
 
     def test_challenge(self):
-        runner1 = Runner('Lily')
-        runner2 = Runner('Michael')
+        runner3 = Runner('Lily')
+        runner4 = Runner('Michael')
         for _ in range(10):
-            runner1.run()
-            runner2.walk()
-        self.assertNotEqual(runner1.distance, runner2.distance)
+            runner3.run()
+            runner4.walk()
+        self.assertNotEqual(runner3.distance, runner4.distance)
 
 if __name__ == '__main__':
     unittest.main()
